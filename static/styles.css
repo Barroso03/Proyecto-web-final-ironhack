@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #d8d6d6;
+    /* quiero que pueda subir y bajar por el body */
+    overflow-y: scroll;
 }
 
 header {
@@ -10,6 +12,8 @@ header {
     color: #fff;
     text-align: center;
     padding: 1em 0;
+    
+
 }
 
 nav {

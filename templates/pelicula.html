@@ -1,45 +1,53 @@
+<!-- pelicula.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
-    <title>Cine XYZ - Información de la Película</title>
+    <title>Detalles de la Película</title>
+
+    <style>
+        /* Puedes agregar estilos adicionales aquí si es necesario */
+    </style>
 </head>
 <body>
     <header>
-        <h1>Cine XYZ</h1>
+        <h1>Detalles de la Película</h1>
     </header>
-    
-    <nav>
-        <ul class="menu">
-            <li><a href="/templates/index.html"> Volver a Cartelera</a></li>
-            <li><a href="/templates/proximos.html">Próximos Estrenos</a></li>
-        </ul>
-    </nav>
 
     <main>
-        <section class="informacion-pelicula" id="informacion-pelicula">
-            <!-- La información de la película se llenará dinámicamente con JavaScript -->
+        <section class="detalles-pelicula">
+            <div id="informacion-pelicula-container" class="informacion-pelicula-container">
+                <!-- Contenido de la información de la película aparecerá aquí -->
+            </div>
         </section>
     </main>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Obtén el parámetro de la URL para determinar qué película mostrar
-            const params = new URLSearchParams(window.location.search);
-            const peliculaId = params.get('pelicula');
+            // Obtener la información de la película de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const tituloPelicula = urlParams.get('titulo');
+            const descripcionPelicula = urlParams.get('descripcion');
+            const directorPelicula = urlParams.get('director');
+            const anoPelicula = urlParams.get('ano');
 
-            if (peliculaId) {
-                // Simula obtener información de la película
-                const informacionPelicula = obtenerInformacionPelicula(peliculaId);
-
-                // Muestra la información en la página de la película
-                mostrarInformacionEnPagina(informacionPelicula);
-            }
+            // Mostrar la información de la película
+            mostrarInformacionPelicula(tituloPelicula, descripcionPelicula, directorPelicula, anoPelicula);
         });
 
-        // Funciones JavaScript específicas para la página de información de la película (pelicula.html) si es necesario
+        function mostrarInformacionPelicula(titulo, descripcion, director, ano) {
+            const informacionPeliculaContainer = document.getElementById('informacion-pelicula-container');
+            const html = `
+                <h2>${titulo}</h2>
+                <p>${descripcion}</p>
+                <p><strong>Director:</strong> ${director}</p>
+                <p><strong>Año:</strong> ${ano}</p>
+            `;
+
+            informacionPeliculaContainer.innerHTML = html;
+        }
     </script>
 </body>
 </html>

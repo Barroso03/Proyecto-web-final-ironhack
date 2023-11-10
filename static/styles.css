@@ -1,0 +1,79 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d8d6d6;
+}
+
+header {
+    background-color: rgb(77, 77, 154);
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav {
+    background-color: #d8d6d6;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #555;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.cartelera, .proximos-estrenos {
+    text-align: center;
+}
+
+
+
+.informacion-pelicula {
+    text-align: center;
+}
+/* Añade estos estilos adicionales */
+.fila-peliculas {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.pelicula {
+    width: 200px; /* Ocupar todo el ancho */
+    height: 300px; /* Altura de 100px */
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+/* Establece un tamaño específico para las imágenes dentro de las películas */
+.pelicula img {
+    width: 100%; /* Ocupar todo el ancho del contenedor .pelicula */
+    height: 100%; /* Altura 100% del contenedor .pelicula */
+    object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+}
+/* Agrega estilos adicionales según sea necesario */
+

@@ -44,11 +44,15 @@
         function mostrarInformacionPelicula(titulo, descripcion, director, ano, imagen) {
             const informacionPeliculaContainer = document.getElementById('informacion-pelicula-container');
             const html = `
-                <h2>${titulo}</h2>
+            <h2>${titulo}</h2>
+            <div class="detalles-pelicula">
                 <img src="${imagen}" alt="${titulo}">
-                <p>${descripcion}</p>
-                <p><strong>Director:</strong> ${director}</p>
-                <p><strong>Año:</strong> ${ano}</p>
+                <div class="informacion-pelicula-container">
+                    <p><strong>Director:</strong> ${director}</p>
+                    <p><strong>Sinopsis:</strong>${descripcion}</p>
+                    <p><strong>Año:</strong> ${ano}</p>
+                </div>
+            </div>
             `;
 
             informacionPeliculaContainer.innerHTML = html;

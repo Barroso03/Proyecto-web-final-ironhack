@@ -84,12 +84,20 @@ main {
 /* Agrega tus estilos generales aquí */
 
 .detalles-pelicula {
+    width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
     display: flex;
-    align-items: flex-start;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    align-items: flex-start; /* Alinea el contenido en la parte superior */
 }
 
 .detalles-pelicula img {
-    width: 200px; /* ajusta el tamaño según tus preferencias */
+    max-width: 100%;
     height: auto;
-    margin-right: 20px; /* ajusta el espacio entre la imagen y el texto */
+    max-height: 400px;
+}
+
+.informacion-pelicula-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px; /* Añade un margen a la izquierda para separar la imagen del texto */
 }

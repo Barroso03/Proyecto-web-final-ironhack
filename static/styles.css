@@ -81,3 +81,15 @@ main {
 }
 /* Agrega estilos adicionales según sea necesario */
 
+/* Agrega tus estilos generales aquí */
+
+.detalles-pelicula {
+    display: flex;
+    align-items: flex-start;
+}
+
+.detalles-pelicula img {
+    width: 200px; /* ajusta el tamaño según tus preferencias */
+    height: auto;
+    margin-right: 20px; /* ajusta el espacio entre la imagen y el texto */
+}

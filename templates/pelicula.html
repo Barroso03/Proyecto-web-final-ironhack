@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/static/styles.css">
     <title>Detalles de la Película</title>
 
-    
+    <!-- Agrega tus estilos adicionales aquí si es necesario -->
 </head>
 <body>
     <header>
@@ -35,15 +35,17 @@
             const descripcionPelicula = urlParams.get('descripcion');
             const directorPelicula = urlParams.get('director');
             const anoPelicula = urlParams.get('ano');
+            const imagenPelicula = urlParams.get('imagen');
 
             // Mostrar la información de la película
-            mostrarInformacionPelicula(tituloPelicula, descripcionPelicula, directorPelicula, anoPelicula);
+            mostrarInformacionPelicula(tituloPelicula, descripcionPelicula, directorPelicula, anoPelicula, imagenPelicula);
         });
 
-        function mostrarInformacionPelicula(titulo, descripcion, director, ano) {
+        function mostrarInformacionPelicula(titulo, descripcion, director, ano, imagen) {
             const informacionPeliculaContainer = document.getElementById('informacion-pelicula-container');
             const html = `
                 <h2>${titulo}</h2>
+                <img src="${imagen}" alt="${titulo}">
                 <p>${descripcion}</p>
                 <p><strong>Director:</strong> ${director}</p>
                 <p><strong>Año:</strong> ${ano}</p>

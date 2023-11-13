@@ -78,6 +78,7 @@ main {
     width: 100%; /* Ocupar todo el ancho del contenedor .pelicula */
     height: 100%; /* Altura 100% del contenedor .pelicula */
     object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+    border-radius: 10px;
 }
 /* Agrega estilos adicionales según sea necesario */
 
@@ -88,16 +89,23 @@ main {
     display: flex;
     justify-content: flex-start; /* Alinea el contenido a la izquierda */
     align-items: flex-start; /* Alinea el contenido en la parte superior */
+    border-radius: 10px;
 }
 
 .detalles-pelicula img {
     max-width: 100%;
     height: auto;
     max-height: 400px;
+    border-radius: 10px;
 }
 
 .informacion-pelicula-container {
     display: flex;
     flex-direction: column;
     margin-left: 20px; /* Añade un margen a la izquierda para separar la imagen del texto */
+}
+/* Agrega estilos para los títulos de la información */
+.info-titulo {
+    color: #3366cc; /* Cambia el color según tu preferencia */
+    font-weight: normal; /* Elimina la negrita si no deseas */
 }

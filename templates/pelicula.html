@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/styles.css">
     <title>Detalles de la Película</title>
-
     <!-- Agrega tus estilos adicionales aquí si es necesario -->
-    >
 </head>
 <body>
     <header>
@@ -37,7 +35,7 @@
             const directorPelicula = urlParams.get('director');
             const anoPelicula = urlParams.get('ano');
             const imagenPelicula = urlParams.get('imagen');
-            const tipoPelicula = urlParams.get('type');
+            const tipoPelicula = urlParams.get('tipo');
             const duracionPelicula = urlParams.get('duracion');
             const actoresPelicula = urlParams.get('actores');
 
@@ -48,19 +46,18 @@
         function mostrarInformacionPelicula(titulo, descripcion, director, ano, imagen, tipo, duracion, actores) {
             const informacionPeliculaContainer = document.getElementById('informacion-pelicula-container');
             const html = `
-                <h2>${titulo}</h2>
-                <div class="detalles-pelicula">
-                    <img src="${imagen}" alt="${titulo}">
-                    <div class="informacion-pelicula-container">
-                        <p><strong>Director:</strong> ${director}</p>
-                        <p><strong>Actores:</strong> ${actores}</p>
-                        <p><strong>Sinopsis:</strong> ${descripcion}</p>
-                        <p><strong>Duración:</strong> ${duracion}</p>
-                        <p><strong>Año:</strong> ${ano}</p>
-                        <p><strong>Tipo:</strong> ${tipo}</p>
-                        
-                    </div>
+            <h2 style="display: none;">${titulo}</h2>
+            <div class="detalles-pelicula">
+                <img src="${imagen}" alt="${titulo}">
+                <div class="informacion-pelicula-container">
+                    <p><span class="info-titulo">Director:</span> ${director}</p>
+                    <p><span class="info-titulo">Actores:</span> ${actores}</p>
+                    <p><span class="info-titulo">Sinopsis:</span> ${descripcion}</p>
+                    <p><span class="info-titulo">Duración:</span> ${duracion}</p>
+                    <p><span class="info-titulo">Fecha de estreno:</span> ${ano}</p>
+                    <p><span class="info-titulo">Sección:</span> ${tipo}</p>
                 </div>
+            </div>
             `;
 
             informacionPeliculaContainer.innerHTML = html;
@@ -68,5 +65,4 @@
     </script>
 </body>
 </html>
-
 

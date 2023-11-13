@@ -46,18 +46,39 @@
         function mostrarInformacionPelicula(titulo, descripcion, director, ano, imagen, tipo, duracion, actores) {
             const informacionPeliculaContainer = document.getElementById('informacion-pelicula-container');
             const html = `
-            <h2 style="display: none;">${titulo}</h2>
-            <div class="detalles-pelicula">
-                <img src="${imagen}" alt="${titulo}">
-                <div class="informacion-pelicula-container">
-                    <p><span class="info-titulo">Director:</span> ${director}</p>
-                    <p><span class="info-titulo">Actores:</span> ${actores}</p>
-                    <p><span class="info-titulo">Sinopsis:</span> ${descripcion}</p>
-                    <p><span class="info-titulo">Duración:</span> ${duracion}</p>
-                    <p><span class="info-titulo">Fecha de estreno:</span> ${ano}</p>
-                    <p><span class="info-titulo">Sección:</span> ${tipo}</p>
+                <h2>${titulo}</h2>
+                <div class="detalles-pelicula">
+                    <img src="${imagen}" alt="${titulo}">
+                    <div class="informacion-pelicula-container">
+                        <div class="info-item">
+                            <span class="info-titulo">Director</span>
+                            <span class="info-contenido">${director}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-titulo">Actores</span>
+                            <span class="info-contenido">${actores}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-titulo">Sinopsis</span>
+                            <span class="info-contenido">${descripcion}</span>
+                        </div>
+                    </div>
+                    <div class="informacion-pelicula-container">
+                        <div class="info-item">
+                            <span class="info-titulo">Duración</span>
+                            <span class="info-contenido">${duracion}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-titulo">Fecha de estreno</span>
+                            <span class="info-contenido">${ano}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-titulo">Sección</span>
+                            <span class="info-contenido">${tipo}</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                
             `;
 
             informacionPeliculaContainer.innerHTML = html;

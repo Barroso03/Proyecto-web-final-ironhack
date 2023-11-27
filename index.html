@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Cine XYZ</title>
+    
 </head>
 <body>
     <header>
         <h1>Cine XYZ</h1>
     </header>
-    
+   
     <nav>
         <ul class="menu">
             <li><a href="index.html">Cartelera</a></li>
@@ -19,6 +20,7 @@
     </nav>
 
     <main>
+        <p id ="userGreeting">
         <section class="cartelera">
             <h2>Cartelera</h2>
             
@@ -72,14 +74,21 @@
                     <img src="https://th.bing.com/th?id=ODL.83ac52fd125509b3572ce583e5a4500b&w=135&h=201&c=10&rs=1&qlt=90&o=6&pid=13.1" alt="Pelicula 8">
                     <h3>Juniper</h3>
                 </div>
+
             </div>
+
         </section>
+        
     </main>
+    
 
     <script>
+        var nombreUsuario = prompt('Ingresa tu nombre');
+        document.getElementById('userGreeting').innerHTML = 'Hola ' + nombreUsuario;
+        
         document.addEventListener('DOMContentLoaded', function () {
             const peliculas = document.querySelectorAll('.pelicula');
-
+    
             peliculas.forEach(function (pelicula) {
                 pelicula.addEventListener('click', function () {
                     const titulo = pelicula.dataset.titulo;
@@ -90,13 +99,14 @@
                     const tipo = pelicula.dataset.tipo;
                     const duracion = pelicula.dataset.duracion;
                     const actores = pelicula.dataset.actores;
-
+    
                     // Redirige a la página de detalles con la información como parámetros de consulta
                     window.location.href = `pelicula.html?titulo=${encodeURIComponent(titulo)}&descripcion=${encodeURIComponent(descripcion)}&director=${encodeURIComponent(director)}&ano=${encodeURIComponent(ano)}&imagen=${encodeURIComponent(imagen)}&tipo=${encodeURIComponent(tipo)}&duracion=${encodeURIComponent(duracion)}&actores=${encodeURIComponent(actores)}`;
                 });
             });
         });
     </script>
+    
 </body>
 </html>
 

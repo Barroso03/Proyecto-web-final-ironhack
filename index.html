@@ -13,8 +13,8 @@
     
     <nav>
         <ul class="menu">
-            <li><a href="/templates/index.html">Cartelera</a></li>
-            <li><a href="/templates/proximos.html">Próximos</a></li>
+            <li><a href="index.html">Cartelera</a></li>
+            <li><a href="proximos.html">Próximos</a></li>
         </ul>
     </nav>
 
@@ -92,7 +92,7 @@
                     const actores = pelicula.dataset.actores;
 
                     // Redirige a la página de detalles con la información como parámetros de consulta
-                    window.location.href = `/templates/pelicula.html?titulo=${encodeURIComponent(titulo)}&descripcion=${encodeURIComponent(descripcion)}&director=${encodeURIComponent(director)}&ano=${encodeURIComponent(ano)}&imagen=${encodeURIComponent(imagen)}&tipo=${encodeURIComponent(tipo)}&duracion=${encodeURIComponent(duracion)}&actores=${encodeURIComponent(actores)}`;
+                    window.location.href = `pelicula.html?titulo=${encodeURIComponent(titulo)}&descripcion=${encodeURIComponent(descripcion)}&director=${encodeURIComponent(director)}&ano=${encodeURIComponent(ano)}&imagen=${encodeURIComponent(imagen)}&tipo=${encodeURIComponent(tipo)}&duracion=${encodeURIComponent(duracion)}&actores=${encodeURIComponent(actores)}`;
                 });
             });
         });
